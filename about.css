@@ -1,0 +1,203 @@
+/* Universal Box Model Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e293b;
+  background-color: #0f172a;
+  background-image: radial-gradient(#334155 15%, transparent 16%);
+  background-size: 16px 16px;
+}
+
+/* Header with Overlay */
+.about-header {
+  background-color: #020617;
+  border-bottom: 4px solid #1abc9c;
+}
+
+.header-overlay {
+  padding: 28px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header-overlay h1 {
+  margin: 0 0 16px 0;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Restyled Navbar: Rounded Teal Pills */
+.pill-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.pill-nav li {
+  display: inline-block;
+  margin: 4px;
+}
+
+.pill-nav a {
+  display: block;
+  padding: 8px 16px;
+  color: #ffffff;
+  background-color: #1e293b;
+  text-decoration: none;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pill-nav a:hover,
+.pill-nav a.active {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+  color: #ffffff;
+}
+
+/* Container & Cards */
+.page-container {
+  width: 90%;
+  max-width: 980px;
+  margin: 30px auto;
+}
+
+.card-box {
+  background-color: #ffffff;
+  padding: 24px;
+  margin-bottom: 26px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Positioning */
+.relative-container {
+  position: relative;
+}
+
+.badge-absolute {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #1abc9c;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 4px 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+/* Float & Clearfix */
+.media-column {
+  width: 48%;
+  margin-bottom: 12px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.audio-player {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.thumb-box {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.thumb-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  font-size: 13px;
+  color: #64748b;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+/* Lists */
+.lists-wrapper {
+  overflow: hidden;
+}
+
+.list-col {
+  width: 48%;
+  float: left;
+  margin-right: 2%;
+}
+
+.ordered-list {
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.unordered-list {
+  list-style-type: square;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #334155;
+}
+
+/* Horizontal Scroll Table */
+.overflow-scroll-box {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  margin-top: 14px;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table th {
+  background-color: #0f172a;
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: 3px solid #1abc9c;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.about-footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+  font-size: 14px;
+}
