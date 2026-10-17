@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OceanWP Gym Club | Membership Registration</title>
+  <link rel="stylesheet" href="membership.css">
+</head>
+<body>
+
+  <header class="reg-header">
+    <div class="header-inner">
+      <h2>Athlete Membership Registration Portal</h2>
+      <nav class="badge-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="membership.html" class="current-tab">MEMBERSHIP</a></li>
+          <li><a href="trainers.html">TRAINERS</a></li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="form-container">
+    <div class="form-intro">
+      <h1>Gym Club Membership Intake</h1>
+      <p>Complete all 15 required parameters to enroll in your membership tier.</p>
+    </div>
+
+    <form action="#" method="post" enctype="multipart/form-data" class="app-form">
+
+      <!-- Text, Password, Email, Readonly -->
+      <fieldset class="form-group">
+        <legend class="group-title">Personal Credentials</legend>
+        
+        <div class="input-row">
+          <label for="athlete-name">Full Athlete Name (min 4, max 25 chars):</label>
+          <input type="text" id="athlete-name" name="athlete-name" required minlength="4" maxlength="25" placeholder="e.g. Ehtesham Arshad">
+        </div>
+
+        <div class="input-row">
+          <label for="member-pass">Locker Passcode (min 8 chars):</label>
+          <input type="password" id="member-pass" name="member-pass" required minlength="8" placeholder="••••••••">
+        </div>
+
+        <div class="input-row">
+          <label for="member-email">Contact Email Address:</label>
+          <input type="email" id="member-email" name="member-email" required placeholder="member@gymclub.com">
+        </div>
+
+        <div class="input-row">
+          <label for="tag-id">Locker RFID Tag ID (Read-Only):</label>
+          <input type="text" id="tag-id" name="tag-id" value="OWP-RFID-7729" readonly>
+        </div>
+      </fieldset>
+
+      <!-- URL, Date, Time, Number -->
+      <fieldset class="form-group">
+        <legend class="group-title">Fitness Profile & Schedule</legend>
+        
+        <div class="input-row">
+          <label for="tracking-link">Strava / Fitness Tracker Profile URL:</label>
+          <input type="url" id="tracking-link" name="tracking-link" required placeholder="https://strava.com/athletes/profile">
+        </div>
+
+        <div class="input-row">
+          <label for="start-date">Membership Activation Date:</label>
+          <input type="date" id="start-date" name="start-date" required>
+        </div>
+
+        <div class="input-row">
+          <label for="training-time">Preferred Daily Gym Access Window:</label>
+          <input type="time" id="training-time" name="training-time" required>
+        </div>
+
+        <div class="input-row">
+          <label for="deadlift-max">Deadlift 1-Rep Max in kg (min 30, max 350):</label>
+          <input type="number" id="deadlift-max" name="deadlift-max" min="30" max="350" value="80" required>
+        </div>
+      </fieldset>
+
+      <!-- Color, Range, Select, File -->
+      <fieldset class="form-group">
+        <legend class="group-title">Preferences & Clearance Documents</legend>
+        
+        <div class="input-row">
+          <label for="wristband-color">Gym Access Wristband Color:</label>
+          <input type="color" id="wristband-color" name="wristband-color" value="#1abc9c">
+        </div>
+
+        <div class="input-row">
+          <label for="intensity-level">Cardio Intensity Baseline (1 to 100):</label>
+          <input type="range" id="intensity-level" name="intensity-level" min="1" max="100" value="50">
+        </div>
+
+        <div class="input-row">
+          <label for="tier-select">Selected Membership Tier:</label>
+          <select id="tier-select" name="tier-select" required>
+            <option value="" disabled selected>-- Select a Membership Tier --</option>
+            <option value="basic">Standard Floor Pass ($29/mo)</option>
+            <option value="pro">Pro Athlete + Sauna & Spa ($49/mo)</option>
+            <option value="elite">Elite All-Access + Personal Trainer ($89/mo)</option>
+          </select>
+        </div>
+
+        <div class="input-row">
+          <label for="medical-file">Medical Clearance / Physician Note (PDF):</label>
+          <input type="file" id="medical-file" name="medical-file" required>
+        </div>
+      </fieldset>
+
+      <!-- Radio, Checkbox, Textarea, Disabled -->
+      <fieldset class="form-group">
+        <legend class="group-title">Training Focus & Legal Agreement</legend>
+        
+        <div class="choice-container">
+          <span class="choice-label">Primary Kinetic Focus:</span>
+          <label><input type="radio" name="focus" value="hypertrophy" checked> Hypertrophy</label>
+          <label><input type="radio" name="focus" value="strength"> Maximum Strength</label>
+          <label><input type="radio" name="focus" value="mobility"> Mobility & Conditioning</label>
+        </div>
+
+        <div class="choice-container">
+          <span class="choice-label">Safety Agreement:</span>
+          <label>
+            <input type="checkbox" name="waiver" required checked>
+            I affirm my medical readiness and agree to follow all safety protocols.
+          </label>
+        </div>
+
+        <div class="input-row">
+          <label for="injury-notes">Previous Musculoskeletal Injuries:</label>
+          <textarea id="injury-notes" name="injury-notes" rows="4" placeholder="Detail any past injuries or physical limitations..."></textarea>
+        </div>
+
+        <div class="input-row">
+          <label for="admin-pin">Gym Manager Override PIN (Locked):</label>
+          <input type="text" id="admin-pin" name="admin-pin" value="STAFF_PIN_REQUIRED" disabled>
+        </div>
+      </fieldset>
+
+      <div class="submit-box">
+        <button type="submit" class="submit-btn">Enroll as Club Member</button>
+      </div>
+
+    </form>
+  </main>
+
+  <footer class="reg-footer">
+    <p>OceanWP Gym Club Intake Gateway &bull; Assignment 1 Component</p>
+  </footer>
+
+</body>
+</html>
