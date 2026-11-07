@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OceanWP Gym Club | Studio Contact & Location</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <!-- Header with Contrast Chip Navbar -->
+  <header class="contact-header">
+    <div class="header-container">
+      <h1 class="contact-title">CONNECT WITH OCEANWP GYM</h1>
+      <p class="contact-subtitle">Facility Inquiries &bull; Private Coaching &bull; Corporate Tours</p>
+      <nav class="chip-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="membership.html">MEMBERSHIP</a></li>
+          <li><a href="trainers.html">TRAINERS</a></li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="contact.html" class="active-chip">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container">
+
+    <!-- Interactive JS Action Bar -->
+    <section class="toolbar-box">
+      <button id="toggle-info-btn" class="action-btn">Hide Operating Hours</button>
+      <button id="theme-btn" class="action-btn-outline">Toggle Night Mode</button>
+    </section>
+
+    <!-- Hybrid Grid + Flexbox Layout Container -->
+    <div class="contact-grid-wrapper">
+
+      <!-- Left Column: About Section & Details -->
+      <aside class="info-sidebar" id="info-section">
+        <div class="sidebar-block">
+          <h2>Main Training Facility</h2>
+          <p>Located in the heart of the athletic district, our 15,000 sq ft arena features professional platforms, turf tracks, and a wellness recovery lounge.</p>
+        </div>
+
+        <div class="sidebar-block">
+          <h3>Operating Schedule</h3>
+          <ul class="info-list">
+            <li><strong>Mon - Fri:</strong> 05:30 AM &ndash; 11:00 PM</li>
+            <li><strong>Saturday:</strong> 06:30 AM &ndash; 09:00 PM</li>
+            <li><strong>Sunday:</strong> 08:00 AM &ndash; 06:00 PM</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-block">
+          <h3>Headquarters Contact</h3>
+          <p><strong>Address:</strong> 42 Kinetic Boulevard, Arena Complex</p>
+          <p><strong>Phone:</strong> +92 (42) 3591-8840</p>
+          <p><strong>Email:</strong> desk@gymclub.oceanwp.org</p>
+        </div>
+      </aside>
+
+      <!-- Right Column: Interactive Contact Form -->
+      <section class="form-main">
+        <div class="form-header">
+          <h2>Send Us an Inquiry</h2>
+          <p>Submit your details and our desk team will reply within 24 hours.</p>
+        </div>
+
+        <form id="contact-form" class="inquiry-form" novalidate>
+          
+          <div class="form-group-row">
+            <div class="form-field">
+              <label for="contact-name">Your Full Name:</label>
+              <input type="text" id="contact-name" placeholder="Ehtesham Arshad" required>
+              <span class="field-feedback" id="name-feedback"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">Your Email Address:</label>
+              <input type="email" id="contact-email" placeholder="ehtesham@example.com" required>
+              <span class="field-feedback" id="email-feedback"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-subject">Inquiry Department:</label>
+            <select id="contact-subject">
+              <option value="membership">Membership Tiers &amp; Pricing</option>
+              <option value="personal-training">Private Personal Training</option>
+              <option value="facility-tour">Schedule a Facility Tour</option>
+              <option value="corporate">Corporate &amp; Group Discounts</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-message">Message / Notes (min 15 chars):</label>
+            <textarea id="contact-message" rows="5" placeholder="Write your specific questions here..." required minlength="15"></textarea>
+            <span class="field-feedback" id="msg-feedback"></span>
+          </div>
+
+          <button type="submit" class="submit-action-btn">Transmit Message</button>
+          
+          <div id="form-status-alert" class="status-box"></div>
+        </form>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="contact-footer">
+    <p>OceanWP Gym Club Contact Desk &bull; Assignment 2 Component</p>
+  </footer>
+
+  <!-- Link to Dedicated Small DOM Script -->
+  <script src="contact.js"></script>
+</body>
+</html>
